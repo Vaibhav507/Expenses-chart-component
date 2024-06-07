@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+#root {
+  width: 95%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--Cream);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Soft-red);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.top-section-heading {
+  color: white;
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  gap: 10px;
+  background-color: var(--Very-pale-orange);
+  color: var(--Dark-brown);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  color: var(--Medium-brown);
+}
+
+.money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.money-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.bold {
+  font-weight: 700;
+  color: var(--Dark-brown);
+}
+
+hr {
+  border:2px solid var(--Cream);
+  padding-top: 40px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.bar-graph-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bar-graph {
+  list-style-type: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.bar-graph li {
+  background: var(--Soft-red);
+  width: 12%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.bar-graph li:nth-of-type(3) {
+  background-color: var(--Cyan);
+}
+
+.bar-graph li:hover .amount {
+  opacity: 1;
+}
+
+.bar-graph li:hover {
+  opacity: 0.5;
+  
+}
+
+.bar-graph .label {
+  position: absolute;
+  bottom: -30px;
+  color: var(--Medium-brown);
+}
+
+.bar-graph .amount {
+  position: absolute;
+  top: -40px;
+  background: var(--Dark-brown);
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+@media (min-width:375px) {
+  #root{
+    width:30%;
+  }
+  
+}
+
